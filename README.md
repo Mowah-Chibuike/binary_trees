@@ -36,3 +36,6 @@
 - 7-binary_tree_inorder.c: a function that goes through a binary tree using in-order traversal
 - 8-binary_tree_postorder.c: a function that goes through a binary tree using post-order traversal
 - 9-binary_tree_height.c: a function that measures the height of a binary tree
+- 10-binary_tree_depth.c: a function that measures the depth of a node in a binary tree
+- 11-binary_tree_size.c: a function that measures the size of a binary tree
+- 12-binary_tree_leaves.c: a function that counts the leaves in a binary tree
