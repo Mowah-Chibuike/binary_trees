@@ -1,12 +1,13 @@
 #include "binary_trees.h"
 
 /**
- * findheight - calculates the height of a binary tree recursively
+ * find_height - calculates the height of a binary tree recursively
  * @tree: pointer to the root node of the tree
  * @no_edges: number of egdes
  * @max_height: lowest height at every instance
  */
-void find_height(const binary_tree_t *tree, size_t no_edges, size_t *max_height)
+void find_height(
+	const binary_tree_t *tree, size_t no_edges, size_t *max_height)
 {
 	if (tree)
 	{
