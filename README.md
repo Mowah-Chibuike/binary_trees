@@ -39,3 +39,9 @@
 - 10-binary_tree_depth.c: a function that measures the depth of a node in a binary tree
 - 11-binary_tree_size.c: a function that measures the size of a binary tree
 - 12-binary_tree_leaves.c: a function that counts the leaves in a binary tree
+- 13-binary_tree_nodes.c: a function that counts the nodes with at least 1 child in a binary tree
+- 14-binary_tree_balance.c: a function that measures the balance factor of a binary tree
+- 15-binary_tree_is_full.c: a function that checks if a binary tree is full
+- 16-binary_tree_is_perfect.c: a function that checks if a binary tree is perfect
+- 17-binary_tree_sibling.c: a function that finds the sibling of a node
+- 18-binary_tree_uncle.c: a function that finds the uncle of a node
