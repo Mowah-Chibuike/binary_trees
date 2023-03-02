@@ -23,8 +23,10 @@ binary_tree_t *binary_trees_ancestor(
 	{
 		while (second_parent)
 		{
-			if (first_parent == second_parent)
-				return (first_parent);
+			if (first == second_parent)
+				return ((binary_tree_t *)first);
+			else if (first_parent == second_parent)
+				return (first->parent);
 			second_parent = second_parent->parent;
 		}
 		first_parent = first_parent->parent;
