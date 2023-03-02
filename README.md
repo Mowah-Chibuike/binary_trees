@@ -46,3 +46,4 @@
 - 17-binary_tree_sibling.c: a function that finds the sibling of a node
 - 18-binary_tree_uncle.c: a function that finds the uncle of a node
 - 100-binary_trees_ancestor.c: a function that finds the lowest common ancestor of two nodes
+- 101-binary_tree_levelorder.c: a function that goes through a binary tree using level-order traversal
