@@ -45,3 +45,4 @@
 - 16-binary_tree_is_perfect.c: a function that checks if a binary tree is perfect
 - 17-binary_tree_sibling.c: a function that finds the sibling of a node
 - 18-binary_tree_uncle.c: a function that finds the uncle of a node
+- 100-binary_trees_ancestor.c: a function that finds the lowest common ancestor of two nodes
