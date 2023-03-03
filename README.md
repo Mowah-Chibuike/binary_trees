@@ -49,3 +49,5 @@
 - 101-binary_tree_levelorder.c: a function that goes through a binary tree using level-order traversal
 - 102-binary_tree_is_complete.c: a function that checks if a binary tree is complete
 - 103-binary_tree_rotate_left.c: a function that performs a left-rotation on a binary tree
+- 104-binary_tree_rotate_right.c: a function that performs a right-rotation on a binary tree
+- 110-binary_tree_is_bst.c: a function that checks if a binary tree is a valid Binary Search Tree
