@@ -12,7 +12,7 @@ int is_bst(binary_tree_t *tree, int minValue, int maxValue)
 {
 	if (!tree)
 		return (1);
-	if (tree->n >= minValue && tree->n <= maxValue &&
+	if (tree->n > minValue && tree->n < maxValue &&
 			is_bst(tree->left, minValue, tree->n) &&
 			is_bst(tree->right, tree->n, maxValue))
 		return (1);
