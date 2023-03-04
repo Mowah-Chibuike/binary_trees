@@ -53,3 +53,4 @@
 - 110-binary_tree_is_bst.c: a function that checks if a binary tree is a valid Binary Search Tree
 - 111-bst_insert.c: a function that inserts a value in a Binary Search Tree
 - 112-array_to_bst.c: a function that builds a Binary Search Tree from an array
+- 113-bst_search.c: a function that searches for a value in a Binary Search Tree
