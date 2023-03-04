@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * findMIn - finds the minimum value in a binary search tree
+ * findMin - finds the minimum value in a binary search tree
  * @root: pointer to the root node of the tree to search
  *
  * Return: the minimum value in the tree
