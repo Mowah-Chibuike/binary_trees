@@ -16,7 +16,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		node = bst_insert(&root, array[i]);
 		if (!node)
-			return (NULL);
+			continue;
 	}
 	return (root);
 }
