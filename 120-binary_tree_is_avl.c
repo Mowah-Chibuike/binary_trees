@@ -29,11 +29,11 @@ int find_height(binary_tree_t *tree)
 
 /**
  * balance_factor - calculates the balance factor of a tree
- * @root: root node of the binary tree
+ * @tree: root node of the binary tree
  *
  * Return: the balance factor of the binary tree
  */
-int balance_factor(binary_tree_t *node)
+int balance_factor(binary_tree_t *tree)
 {
 	int left, right;
 
