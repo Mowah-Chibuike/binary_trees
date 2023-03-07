@@ -37,8 +37,8 @@ int balance_factor(binary_tree_t *tree)
 {
 	int left, right;
 
-	left = find_height(node->left) + 1;
-	right = find_height(node->right) + 1;
+	left = find_height(tree->left) + 1;
+	right = find_height(tree->right) + 1;
 	return (left - right);
 }
 
