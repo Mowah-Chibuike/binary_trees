@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * insert - inserts a node into a balanced binary tree
+ * b_tree_insert - inserts a node into a balanced binary tree
  * @tree: tree to insert into
  * @node: node to be inserted
  */
