@@ -1,18 +1,18 @@
 #include "binary_trees.h"
 
 /**
- * insert - inserts a node into a balanced binary tree
+ * tree_insert - inserts a node into a balanced binary tree
  * @tree: tree to insert into
  * @node: node to be inserted
  */
-void insert(binary_tree_t *tree, binary_tree_t *node)
+void tree_insert(binary_tree_t *tree, binary_tree_t *node)
 {
 	if (tree)
 	{
 		if (node->n <= tree->n)
 		{
 			if (tree->left)
-				insert(tree->left, node);
+				tree_insert(tree->left, node);
 			else
 			{
 				tree->left = node;
@@ -22,7 +22,7 @@ void insert(binary_tree_t *tree, binary_tree_t *node)
 		else
 		{
 			if (tree->right)
-				insert(tree->right, node);
+				tree_insert(tree->right, node);
 			else
 			{
 				tree->right = node;
@@ -44,7 +44,6 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 
 	if (!tree || !tree->right)
 		return (tree);
-
 	new_root = tree->right;
 	tree->right = NULL;
 	temp = new_root->left;
@@ -52,6 +51,6 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 	tree->parent = new_root;
 	new_root->left = tree;
 	if (temp)
-		insert(tree, temp);
+		tree_insert(tree, temp);
 	return (new_root);
 }

@@ -1,35 +1,34 @@
 #include "binary_trees.h"
 
 /**
- * find_height - calculates the height of a binary tree recursively
- * @tree: pointer to the root node of the tree
- * @no_edges: number of egdes
- * @max_height: lowest height at every instance
+ * max - finds the larger between two integers
+ * @a: the first integer
+ * @b: the second integer
+ *
+ * Return: the larger between two integers
  */
-void find_height(const binary_tree_t *tree, int no_edges, int *max_height)
+int max(int a, int b)
 {
-	if (tree)
-	{
-		find_height(tree->left, no_edges + 1, max_height);
-		find_height(tree->right, no_edges + 1, max_height);
-		if (no_edges > *max_height)
-			*max_height = no_edges;
-	}
+	if (a < b)
+		return (b);
+	return (a);
 }
 
 /**
- * tree_height - measures the height of a binary tree
- * @tree: pointer to the root node of the tree to measure the height.
- *
+ * find_height - calculates the height of a binary tree recursively
+ * @tree: pointer to the root node of the tree
+ * 
  * Return: the height of the tree
  */
-int tree_height(const binary_tree_t *tree)
+int find_height(const binary_tree_t *tree)
 {
-	int max_height;
+	int left, right;
 
-	max_height = 0;
-	find_height(tree, 0, &max_height);
-	return (max_height);
+	if (!tree)
+		return (-1);
+	left = find_height(tree->left);
+	right = find_height(tree->right);
+	return (max(left, right) + 1);
 }
 
 /**
@@ -40,17 +39,9 @@ int tree_height(const binary_tree_t *tree)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int balance = 0, lh, rh;
+	int lh, rh;
 
-	if (tree)
-	{
-		lh = tree_height(tree->left);
-		if (tree->left)
-			lh++;
-		rh = tree_height(tree->right);
-		if (tree->right)
-			rh++;
-		balance = lh - rh;
-	}
-	return (balance);
+	lh = find_height(tree->left) + 1;
+	rh = find_height(tree->right) + 1;
+	return (lh - rh);
 }

@@ -5,14 +5,14 @@
  * @tree: tree to insert into
  * @node: node to be inserted
  */
-void insert(binary_tree_t *tree, binary_tree_t *node)
+void b_tree_insert(binary_tree_t *tree, binary_tree_t *node)
 {
 	if (tree)
 	{
 		if (node->n <= tree->n)
 		{
 			if (tree->left)
-				insert(tree->left, node);
+				b_tree_insert(tree->left, node);
 			else
 			{
 				tree->left = node;
@@ -22,7 +22,7 @@ void insert(binary_tree_t *tree, binary_tree_t *node)
 		else
 		{
 			if (tree->right)
-				insert(tree->right, node);
+				b_tree_insert(tree->right, node);
 			else
 			{
 				tree->right = node;
@@ -51,6 +51,6 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 	tree->parent = new_root;
 	new_root->right = tree;
 	if (temp)
-		insert(tree, temp);
+		b_tree_insert(tree, temp);
 	return (new_root);
 }
