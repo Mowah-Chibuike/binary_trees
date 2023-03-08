@@ -57,3 +57,4 @@
 - 114-bst_remove.c: a function that removes a node from a Binary Search Tree
 - 120-binary_tree_is_avl.c: a function that checks if a binary tree is a valid AVL Tree
 - 121-avl_insert.c: a function that inserts a value in an AVL Tree
+- 122-array_to_avl.c: a function that builds an AVL tree from an array
