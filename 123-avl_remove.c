@@ -67,7 +67,7 @@ avl_t *avl_rebalance(avl_t *node)
  *
  * Return: new_root after deleting the node
  */
-avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
+avl_t *avl_delete(avl_t *root, int value)
 {
 	avl_t *temp;
 	int balance;
@@ -75,9 +75,9 @@ avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
 	if (root == NULL)
 		return (NULL);
 	if (value < root->n)
-		root->left = avl_delete(tree, root->left, value);
+		root->left = avl_delete(root->left, value);
 	else if (value > root->n)
-		root->right = avl_delete(tree, root->right, value);
+		root->right = avl_delete(root->right, value);
 	else
 	{
 		if (!root->left && !root->right)
@@ -102,7 +102,7 @@ avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
 		else
 		{
 			root->n = findMin(root->right);
-			root->right = avl_delete(tree, root->right, root->n);
+			root->right = avl_delete(root->right, root->n);
 		}
 	}
 	balance = binary_tree_balance(root);
@@ -121,5 +121,5 @@ avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
  */
 avl_t *avl_remove(avl_t *root, int value)
 {
-	return (avl_delete(root, root, value));
+	return (avl_delete(root, value));
 }

@@ -17,7 +17,7 @@ int max(int a, int b)
 /**
  * find_height - calculates the height of a binary tree recursively
  * @tree: pointer to the root node of the tree
- * 
+ *
  * Return: the height of the tree
  */
 int find_height(const binary_tree_t *tree)
