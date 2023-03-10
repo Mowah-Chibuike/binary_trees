@@ -60,3 +60,4 @@
 - 122-array_to_avl.c: a function that builds an AVL tree from an array
 - 123-avl_remove.c: a function that removes a node from an AVL tree
 - 124-sorted_array_to_avl.c: a function that builds an AVL tree from an array
+- 130-binary_tree_is_heap.c: a function that checks if a binary tree is a valid Max Binary Heap
