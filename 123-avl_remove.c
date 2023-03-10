@@ -12,7 +12,13 @@ int findMin(avl_t *root)
 		return (root->n);
 	return (findMin(root->left));
 }
-
+i
+/**
+ * avl_rebalance - rebalances an avl tree
+ * @node: root node of the tree or subtree to balance
+ *
+ * Return: pointer to the root node of the tree
+ */
 avl_t *avl_rebalance(avl_t *node)
 {
 	int balance;
@@ -78,7 +84,7 @@ avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
 		{
 			free(root);
 			return (NULL);
-		}	
+		}
 		else if (!root->right)
 		{
 			temp = root->left;
@@ -115,5 +121,5 @@ avl_t *avl_delete(avl_t *tree, avl_t *root, int value)
  */
 avl_t *avl_remove(avl_t *root, int value)
 {
-	return(avl_delete(root, root, value));
+	return (avl_delete(root, root, value));
 }
