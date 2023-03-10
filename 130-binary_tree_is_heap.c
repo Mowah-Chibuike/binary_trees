@@ -85,7 +85,6 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 		}
 		else
 			flag = 1;
-
 		if (head->node->right)
 		{
 			if (flag)
@@ -97,10 +96,7 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 		}
 		else
 			flag = 1;
-
 		queue_pop(&head);
 	}
-	if (head)
-		free_queue(head);
 	return (1);
 }
