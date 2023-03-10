@@ -12,7 +12,7 @@ int findMin(avl_t *root)
 		return (root->n);
 	return (findMin(root->left));
 }
-i
+
 /**
  * avl_rebalance - rebalances an avl tree
  * @node: root node of the tree or subtree to balance
